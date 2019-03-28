@@ -74,11 +74,11 @@ public class ExecutionResultImpl implements ExecutionResult {
         if (errors != null && !errors.isEmpty()) {
             result.put("errors", errorsToSpec(errors));
         }
-        if (dataPresent) {
-            result.put("data", data);
-        }
         if (extensions != null) {
             result.put("extensions", extensions);
+        }
+        if (dataPresent) {
+            result.put("data", data);
         }
         return result;
     }
